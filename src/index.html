@@ -5,6 +5,31 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="contant">
+<header class="header">
+      <div class="form-container">
+        <form class="search-form" id="search-form">
+          <input
+            id="text"
+            type="text"
+            name="query"
+            class="user-input"
+            placeholder="Search images..."
+            
+          />
+          <button type="submit" class="search-Btn"><span class="search">Search</span></button>
+        </form>
+        
+</header>
+        <div class="gallery"></div>
+        <div class="bottomElement"></div>
+      </div>
+        <button type="submit" class="search-Btn load-btn load-hidden" ><span class="search">Load more</span></button>
+        <span class="js-text"></span>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

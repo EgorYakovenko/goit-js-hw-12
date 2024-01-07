@@ -1,0 +1,273 @@
+.search-Btn {
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background-color: #4E75FF;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  display: block;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: 8px;
+}
+
+.search-Btn:hover,
+.search-Btn:focus {
+  background-color: #6C8CFF;
+  transition: background-color 2000 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.user-input {
+  display: inline-block;
+  width: 256px;
+  height: 38px;
+  border: 1px solid #808080;
+  padding-left: 16px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+.user-input::placeholder {
+
+  color: #808080;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  align-items: center;
+  letter-spacing: 0.04em;
+}
+
+.form-container {
+  display: inline-block;
+
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+}
+
+ .load-btn {
+   width: 120px;
+   height: 40px;
+   justify-content: center;
+   margin-left: auto;
+   margin-top: 10px
+ }
+
+ 
+ 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b4b4b4;
+}
+
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.container {
+  max-width: 448px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.js-span {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10px auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.search-form {
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 16px;
+
+  justify-content: center;
+}
+
+.load-hidden {
+  display: none;
+}
+
+
+@media screen and (min-width: 668px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .photo-card {
+    flex-basis: calc((100% - 12px) / 3);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+
+  }
+
+  .photo-card {
+    flex-basis: calc((100% - 24px) / 3);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+
+  }
+}
+
+
+.js-text {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* .info {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .info-item {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+/* ++++++++++++++++++++++++++++++++++++++++++ */
+.loader {
+  font-size: 14px;
+  color: #FFF;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+
+.loader:before {
+  content: '';
+  animation: 5s print linear alternate infinite;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translatey(-45%);
+  width: 2px;
+  height: 1.3em;
+  background: currentColor;
+  opacity: 0.8;
+  animation: 1s blink steps(2) infinite;
+}
+
+@keyframes blink {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes print {
+  0% {
+    content: 'S'
+  }
+
+  10% {
+    content: 'Se'
+  }
+
+  20% {
+    content: 'Sea'
+  }
+
+  30% {
+    content: 'Sear'
+  }
+
+  40% {
+    content: 'Searc'
+  }
+
+  50% {
+    content: 'Search'
+  }
+
+  60% {
+    content: 'Searchi'
+  }
+
+  70% {
+    content: 'Searchin'
+  }
+
+  80% {
+    content: 'Searching'
+  }
+
+  90%,
+  100% {
+    content: 'Searching'
+  }
+}
