@@ -19,7 +19,7 @@ const photoCard = document.querySelector('.photo-card')
 const BASE_URL = 'https://pixabay.com/api/'
 const API_KEY = '41296916-da04ab2f63441e92262fae4bb'
 
-inputValue.addEventListener('submit', onSerch);
+inputValue.addEventListener('submit', onSearch);
 loadMoreBtn.addEventListener('click', onClickLoadMoreBtn);
 
 
@@ -38,17 +38,29 @@ function removeClassOnBtn() {
   search.textContent = 'Search';
 };
 
+function changeTitleOnLoadeMoreBtn() {
+  loadMoreBtn.classList.add('loader')
+  loadMoreBtn.textContent = '';
+
+};
+
+function removeClassOnLoadeMoreBtn() {
+  loadMoreBtn.classList.remove('loader');
+  loadMoreBtn.textContent = 'Load more';
+};
+
 async function onClickLoadMoreBtn() { 
   page += 1;
-
+  changeTitleOnLoadeMoreBtn()
   const localStorageData = localStorage.getItem('inputValue');
   const formData = JSON.parse(localStorageData)
   const post = await fetchPicture(formData);
 
   renderCard(post);
+  removeClassOnLoadeMoreBtn()
 };
 
-async function onSerch(event) {
+async function onSearch(event) {
   event.preventDefault(); 
   loadMoreBtn.classList.add('load-hidden');
   jsText.textContent = '';
