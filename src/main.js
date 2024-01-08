@@ -78,8 +78,6 @@ async function onSearch(event) {
   
 };
 
-
-
 async function fetchPicture(search) {
   try {
     const response = await axios.get(BASE_URL, {
@@ -99,10 +97,9 @@ async function fetchPicture(search) {
   }
 };
 
-
 async function renderCard(res) { 
   totalHits += res.hits.length;
-  if (totalHits > res.totalHits ) {
+  if (totalHits > res.totalHits || totalHits === res.totalHits) {
     loadMoreBtn.classList.add('load-hidden');
     jsText.textContent = "We're sorry, but you've reached the end of search results.";
   } else {
@@ -111,6 +108,7 @@ async function renderCard(res) {
   }
 
   if (res.total === 0) {
+    jsText.textContent = '';
     onWarning()
   } else {
     const markup = await createMarkup(res.hits);
